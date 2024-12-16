@@ -1,8 +1,8 @@
 package main
 
 import (
-
-  "isuct.ru/informatics2022/Lab_4"
+	"fmt"
+  	"isuct.ru/informatics2022/Lab_4"
 )
 
 func main() {
