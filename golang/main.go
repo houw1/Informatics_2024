@@ -2,7 +2,7 @@ package main
 
 import (
 
-  "isuct.ru/informatics2022/lab4"
+  "isuct.ru/informatics2022/Lab_4"
 )
 
 func main() {
