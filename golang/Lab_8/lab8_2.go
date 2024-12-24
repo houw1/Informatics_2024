@@ -24,9 +24,7 @@ func WriteFile(path, text string) error {
 		return err
 	}
 	defer file.Close()
-
 	file.WriteString(text)
-
 	return nil
 }
 

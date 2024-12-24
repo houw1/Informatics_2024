@@ -14,7 +14,7 @@ func RunLab8() {
 		panic(err)
 	}
 
-	fmt.Println("введите текст")
+	fmt.Println("Введите текст")
 	var in *bufio.Reader = bufio.NewReader(os.Stdin)
 	text, err := in.ReadString('\n')
 	if err != nil {
