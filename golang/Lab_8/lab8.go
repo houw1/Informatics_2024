@@ -1,7 +1,9 @@
 package lab8
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 func RunLab8() {
@@ -12,12 +14,19 @@ func RunLab8() {
 		panic(err)
 	}
 
-	err = WriteFile()
+	fmt.Println("введите текст")
+	var in *bufio.Reader = bufio.NewReader(os.Stdin)
+	text, err := in.ReadString('\n')
 	if err != nil {
 		panic(err)
 	}
 
-	text, err := ReadFile()
+	err = WriteFile(Path, text)
+	if err != nil {
+		panic(err)
+	}
+
+	text, err = ReadFile()
 	if err != nil {
 		panic(err)
 	}

@@ -1,8 +1,6 @@
 package lab8
 
 import (
-	"bufio"
-	"fmt"
 	"io"
 	"os"
 	"strings"
@@ -20,19 +18,12 @@ func CreateFile() error {
 	return nil
 }
 
-func WriteFile() error {
-	file, err := os.OpenFile(Path, os.O_WRONLY, 0666)
+func WriteFile(path, text string) error {
+	file, err := os.OpenFile(path, os.O_WRONLY, 0666)
 	if err != nil {
 		return err
 	}
 	defer file.Close()
-
-	fmt.Println("введите текст")
-	var in *bufio.Reader = bufio.NewReader(os.Stdin)
-	text, err := in.ReadString('\n')
-	if err != nil {
-		return err
-	}
 
 	file.WriteString(text)
 
