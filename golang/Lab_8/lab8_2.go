@@ -28,8 +28,8 @@ func WriteFile(path, text string) error {
 	return nil
 }
 
-func ReadFile() (string, error) {
-	file, err := os.Open(Path)
+func ReadFile(path string) (string, error) {
+	file, err := os.Open(path)
 	if err != nil {
 		return "", err
 	}
@@ -48,7 +48,7 @@ func ReadFile() (string, error) {
 }
 
 func SearchText(searchText string) (bool, error) {
-	text, err := ReadFile()
+	text, err := ReadFile(Path)
 	if err != nil {
 		return false, err
 	}

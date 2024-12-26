@@ -30,7 +30,7 @@ func task1() error {
 	}
 
 	var result []float64
-	Parameters := strings.Split(text, "\r\n")
+	Parameters := strings.Split(text, "\n")
 	for _, P := range Parameters {
 		number, err := strconv.ParseFloat(P, 64)
 		if err != nil {

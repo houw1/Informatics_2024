@@ -26,7 +26,7 @@ func RunLab8() {
 		panic(err)
 	}
 
-	text, err = ReadFile()
+	text, err = ReadFile(Path)
 	if err != nil {
 		panic(err)
 	}
